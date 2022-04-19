@@ -3,7 +3,11 @@ const user = {
     state: {
         title: 0
     },
-    actions: {},
+    actions: {
+        getData(a,b) {
+            console.log(a,b);
+        }
+    },
     mutations: {},
     getters: {}
 }

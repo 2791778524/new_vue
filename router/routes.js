@@ -9,7 +9,7 @@ export default [
                 component: () => import('../components/name.vue')
             },
             {
-                path:'age',
+                path:'age/:id',
                 component: () => import('../components/age.vue')
             }
         ]

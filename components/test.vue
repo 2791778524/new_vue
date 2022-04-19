@@ -16,28 +16,38 @@
 </template>
 
 <script>
+import{ mapState } from '../store/modules/user'
 export default {
   data(){
     return{
-
+      data:'1111'
     }
   },
   methods: {
     goName() {
       this.$router.push({
-        path:'/home/name'
+        path:`/home/name`,
+        query:{
+          name:'李四'
+        }
       })
     },
     goAge() {
       this.$router.push({
-        path:'/home/age'
+        path:`/home/age/${10}`,
       })
     }
+  },
+  mounted() {
+    this.$store.dispatch('getData',this.name)
   }
 }
 </script>
 
 <style>
+li{
+  list-style: none;
+}
 .box{
   display: flex;
 }
