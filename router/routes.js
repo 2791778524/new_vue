@@ -7,6 +7,10 @@ export default [
             {
                 path:'name',
                 component: () => import('../components/name.vue')
+            },
+            {
+                path:'age',
+                component: () => import('../components/age.vue')
             }
         ]
     },
