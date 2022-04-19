@@ -18,7 +18,7 @@
 <script>
 import{ mapState } from '../store/modules/user'
 export default {
-  data(){
+  data() {
     return{
       data:'1111'
     }
@@ -39,7 +39,14 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch('getData',this.name)
+    console.log(this.$store.dispath('getData'));
+    console.log(this.title);
+  },
+  computed: {
+    ...mapState['title'],
+    title() {
+      return this.$store.state.user.title
+    }
   }
 }
 </script>
